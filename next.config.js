@@ -89,6 +89,7 @@ const config = {
     disableUI: process.env.DISABLE_UI || '',
     hostUrl: process.env.HOST_URL || '',
   },
+
   basePath,
   output: 'standalone',
   eslint: {
