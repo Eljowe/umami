@@ -1,13 +1,12 @@
-# fly.toml app configuration file generated for umami-toml on 2024-03-21T11:20:42+02:00
+# fly.toml app configuration file generated for umami-app on 2024-01-31T19:22:39+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'umami-toml'
+app = 'umami-app'
 primary_region = 'arn'
 
 [build]
-  image = "ghcr.io/umami-software/umami:postgresql-v1.39.5"
 
 [http_service]
   internal_port = 3000
@@ -18,6 +17,6 @@ primary_region = 'arn'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 1024
